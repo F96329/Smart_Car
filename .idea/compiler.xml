@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="July-registry-center" />
+        <module name="July-data-commons" />
+        <module name="July-commons" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="July-commons" target="1.8" />
+      <module name="July-data-commons" target="1.8" />
+      <module name="July-parent" target="1.8" />
+      <module name="July-registry-center" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="July-commons" options="-parameters" />
+      <module name="July-data-commons" options="-parameters" />
+      <module name="July-registry-center" options="-parameters" />
+    </option>
+  </component>
+</project>
