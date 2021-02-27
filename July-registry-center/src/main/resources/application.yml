@@ -1,0 +1,18 @@
+#######配置项目占用端口号
+server:
+  port: 9999
+spring:
+  :application:
+    name:July_registry_center
+####### 配置Eureka Server
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    #####禁止注册中心对外发布
+    registry-with-eureka: false
+    ####禁止注册中心去其他注册中心发现服务
+    fetch-registry: false
+    ####设定注册中心暴露地址
+    service-url:
+      defaultZone:http://${eureka.instance.hostname}:${io.netty.serviceThreadPrefix.port}/eureka
