@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/July-parent/pom.xml" />
         <option value="$PROJECT_DIR$/July-commons/pom.xml" />
         <option value="$PROJECT_DIR$/July-data-commons/pom.xml" />
+        <option value="$PROJECT_DIR$/July-user-provider/pom.xml" />
       </list>
     </option>
   </component>

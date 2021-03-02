@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="July-registry-center" />
         <module name="July-data-commons" />
+        <module name="July-user-provider" />
         <module name="July-commons" />
       </profile>
     </annotationProcessing>
@@ -16,6 +17,7 @@
       <module name="July-data-commons" target="1.8" />
       <module name="July-parent" target="1.8" />
       <module name="July-registry-center" target="1.8" />
+      <module name="July-user-provider" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -23,6 +25,7 @@
       <module name="July-commons" options="-parameters" />
       <module name="July-data-commons" options="-parameters" />
       <module name="July-registry-center" options="-parameters" />
+      <module name="July-user-provider" options="-parameters" />
     </option>
   </component>
 </project>
