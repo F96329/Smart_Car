@@ -49,11 +49,11 @@ public class PageVO<E> implements Serializable {
 		this.draw=draw;
 	}
 
-	public Integer getPageNu() {
+	public Integer getPageNum() {
 		return pageNum;
 	}
 
-	public void setPageNu(Integer pageNu) {
+	public void setPageNum(Integer pageNu) {
 		this.pageNum = pageNu;
 	}
 

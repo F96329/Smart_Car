@@ -1,6 +1,7 @@
 package cn.ekgc.July.dao;
 
 import cn.ekgc.July.pojo.entity.Department;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -10,6 +11,7 @@ import java.util.List;
  * @version 1.0.0
  * @since 1.0.0
  */
+@Repository
 public interface DepartmentDao {
 	/**
 	 * <b>按照查询对象查询列表</b>
