@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+		PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.ekgc.July.dao.RoleDao">
+	<select id="findListByQuery" parameterType="Role" resultMap="resultMap">
+		SELECT
+			jr.id,
+			jr.name,
+			jr.code,
+			jr.status,
+			jr.createUser,
+			jr.createTime,
+			jr.updateUser,
+			jr.updateTime
+		FROM
+			July_role jr
+		<where>
+			<trim suffixOverrides="and">
+				<if test="id != null">jr.id ={id} and </if>
+				<if test="name != null">jr.name like concat('%',#{name}'%') and </if>
+				<if test="code != null">jr.code ={code} and </if>
+				<if test="status != null">jr.status ={status} and </if>
+			</trim>
+		</where>
+			order by jr.createTime asc
+	</select>
+
+	<insert id="save" parameterType="Role">
+		insert into July_role(
+			<trim suffixOverrides=",">
+				<if test="id !=null">id, </if>
+				<if test="name !=null">name, </if>
+				<if test="code !=null">code, </if>
+				<if test="status !=null">status, </if>
+				<if test="creaeUser !=null">creaeUser, </if>
+				<if test="creaeTime !=null">creaeTime, </if>
+				<if test="updateUser !=null">updateUser, </if>
+				<if test="updateTime !=null">updateTime, </if>
+			</trim>
+		)values (
+			<trim suffixOverrides=",">
+				<if test="id !=null">#{id}, </if>
+				<if test="name !=null">#{name}, </if>
+				<if test="code !=null">#{code}, </if>
+				<if test="status !=null">#{status}, </if>
+				<if test="creaeUser !=null">#{creaeUser}, </if>
+				<if test="creaeTime !=null">#{creaeTime}, </if>
+				<if test="updateUser !=null">#{updateUser}, </if>
+				<if test="updateTime !=null">#{updateTime}, </if>
+			</trim>
+		)
+	</insert>
+
+	<update id="update" parameterType="Role">
+		update July_role
+		<set>
+			<if test="name !=null">name=#{name}, </if>
+			<if test="code !=null">code=#{code}, </if>
+			<if test="status !=null">status=#{status}, </if>
+			<if test="creaeUser !=null">creaeUser=#{creaeUser}, </if>
+			<if test="creaeTime !=null">creaeTime=#{creaeTime}, </if>
+			<if test="updateUser !=null">updateUser=#{updateUser}, </if>
+			<if test="updateTime !=null">updateTime=#{updateTime}, </if>
+		</set>
+		<where>
+			<trim suffixOverrides="and">
+				<if test="id != null">id ={id} and </if>
+			</trim>
+		</where>
+	</update>
+	<resultMap id="resultMap" type="Role">
+		<id property="" javaType="java.lang.String" column="id"/>
+		<result property="id" javaType="java.lang.String" column="id"/>
+		<result property="name" javaType="java.lang.String" column="name"/>
+		<result property="code" javaType="java.lang.String" column="code"/>
+		<result property="status" javaType="java.lang.Integer" column="status"/>
+		<result property="createUser" javaType="java.lang.String" column="createUser"/>
+		<result property="createTime" javaType="java.util.Date" column="createTime"/>
+		<result property="updateUser" javaType="java.lang.String" column="updateUser"/>
+		<result property="updateTime" javaType="java.util.Date" column="updateTime"/>
+
+
+
+
+	</resultMap>
+</mapper>

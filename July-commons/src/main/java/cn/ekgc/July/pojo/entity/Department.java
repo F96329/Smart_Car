@@ -3,7 +3,7 @@ package cn.ekgc.July.pojo.entity;
 import cn.ekgc.July.base.pojo.entity.BaseEntity;
 
 /**
- *<b>智慧公务车信息平台-部门实习信息</b>
+ *<b>智慧公务车信息平台-部门实体信息</b>
  * @author July
  * @version 1.0.0
  * @since 1.0.0
